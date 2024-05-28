@@ -54,20 +54,21 @@ const AboutPage = () => {
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
               I am a student at California State University, Fullerton, pursuing
-              a Master's in Computer Science with a strong foundation in
+              a Master&apos;s in Computer Science with a strong foundation in
               Aerospace Engineering from San Jose State University.
-              Transitioning from Aerospace to Computer Science, I've embraced
-              the challenge of learning new technologies and programming
-              languages including Python, JavaScript, Rust, and C, among others.
+              Transitioning from Aerospace to Computer Science, I&apos;ve
+              embraced the challenge of learning new technologies and
+              programming languages including Python, JavaScript, Rust, and C,
+              among others.
             </p>
             <p className="text-lg">
               My Aerospace background gives me a unique perspective on
               problem-solving and efficiency, which I apply to my computer
               science projects and teamwork. As I navigate my final year, I am
               keen on finding opportunities where I can contribute, learn, and
-              grow in the tech industry. I'm especially interested in roles that
-              allow me to use my skills in web development, data management, and
-              software engineering.
+              grow in the tech industry. I&apos;m especially interested in roles
+              that allow me to use my skills in web development, data
+              management, and software engineering.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">

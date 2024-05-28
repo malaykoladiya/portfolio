@@ -20,7 +20,7 @@ const Homepage = () => {
         <div className="h-1/2 mt-24 lg:h-full lg:w-4/6 flex flex-col gap-8 items-center lg:items-start justify-center">
           {/* TITLE */}
           <h1 className="text-4xl md:text-6xl font-bold text-left text-transparent bg-clip-text bg-gradient-to-l from-red-400 to to-blue-400">
-            Hello I'am
+            Hello I&apos;m
           </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-left">
             {/* Malay Koladiya */}
@@ -34,7 +34,7 @@ const Homepage = () => {
           {/* DESC */}
           <p className="md:text-xl">Master of Science in Computer Science</p>
           <p className="md:text-xl">
-            Aspiring Full-Stack Developer | Master's in Computer Science |
+            Aspiring Full-Stack Developer | Master&apos;s in Computer Science |
             Proficient in Python | Exploring Rust | Web Dev & ML Enthusiast |
             Ready to Contribute and Grow in the Tech Industry
           </p>

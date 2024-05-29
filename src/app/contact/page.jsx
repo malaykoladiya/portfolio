@@ -35,7 +35,7 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className="h-screen bg-gradient-to-b from-blue-100 to-red-100 overflow-y-auto"
+      className=" bg-gradient-to-b from-blue-100 to-red-100 overflow-y-auto"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -71,7 +71,7 @@ const ContactPage = () => {
         >
           <span>Hello Malay,</span>
           <textarea
-            rows={16}
+            rows={8}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
           />

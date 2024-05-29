@@ -16,6 +16,10 @@ import {
   SiFigma,
   SiPython,
   SiFlask,
+  SiRust,
+  SiRedis,
+  SiFastapi,
+  SiKubernetes,
 } from "react-icons/si";
 
 const skills = [
@@ -26,16 +30,24 @@ const skills = [
   { name: "React.js", icon: <SiReact color="#61DAFB" /> },
   { name: "Next.js", icon: <SiNextdotjs color="#000000" /> },
   { name: "Flask", icon: <SiFlask color="#000000" /> },
+  { name: "FastAPI", icon: <SiFastapi color="#009688" /> },
+
   { name: "Tailwind CSS", icon: <SiTailwindcss color="#38B2AC" /> },
+
   { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
+  { name: "Redis", icon: <SiRedis color="#DC382D" /> },
   { name: "PostgreSQL", icon: <SiPostgresql color="#336791" /> },
   { name: "Node.js", icon: <SiNodedotjs color="#339933" /> },
   { name: "Express.js", icon: <SiExpress color="#000000" /> },
+  { name: "AWS", icon: <SiAmazonaws color="#FF9900" /> },
+
+  { name: "Docker", icon: <SiDocker color="#2496ED" /> },
+  { name: "Kubernetes", icon: <SiKubernetes color="#326CE5" /> },
+
+  { name: "Git", icon: <SiGit color="#F05032" /> },
+  { name: "Rust", icon: <SiRust color="#000000" /> },
   { name: "Framer Motion", icon: <SiFramer color="#0055FF" /> },
   { name: "Vite", icon: <SiVite color="#646CFF" /> },
-  { name: "Docker", icon: <SiDocker color="#2496ED" /> },
-  { name: "AWS", icon: <SiAmazonaws color="#FF9900" /> },
-  { name: "Git", icon: <SiGit color="#F05032" /> },
   { name: "Figma", icon: <SiFigma color="#F24E1E" /> },
 ];
 

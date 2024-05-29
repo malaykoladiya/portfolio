@@ -35,14 +35,14 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col bg-gradient-to-b from-blue-100 to-red-100 "
+      className="h-screen bg-gradient-to-b from-blue-100 to-red-100 overflow-y-auto"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="flex-1 flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-10">
         {/* TEXT CONTAINER */}
-        <div className="flex-1 flex items-center justify-center text-4xl sm:text-5xl md:text-6xl mb-10 lg:mb-0 lg:mr-10">
+        <div className="flex items-center justify-center text-4xl sm:text-5xl md:text-6xl lg:mr-10 col-span-1 lg:col-span-1">
           <div className="flex">
             {text.split("").map((letter, index) => (
               <motion.span
@@ -67,8 +67,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="flex-1 bg-red-50 mb-10 rounded-xl text-xl flex flex-col gap-4 justify-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24 overflow-y-auto"
-          style={{ maxHeight: "calc(100vh - 4rem)" }}
+          className="bg-red-50 rounded-xl text-xl flex flex-col gap-4 justify-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24 overflow-y-auto col-span-1 lg:col-span-2 max-h-screen"
         >
           <span>Hello Malay,</span>
           <textarea

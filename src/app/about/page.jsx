@@ -53,13 +53,13 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              I am a student at California State University, Fullerton, pursuing
-              a Master&apos;s in Computer Science with a strong foundation in
-              Aerospace Engineering from San Jose State University.
-              Transitioning from Aerospace to Computer Science, I&apos;ve
-              embraced the challenge of learning new technologies and
-              programming languages including Python, JavaScript, Rust, and C,
-              among others.
+              I recently graduated with a Master&apos;s in Computer Science from
+              California State University, Fullerton. My academic journey began
+              with a Bachelor&apos;s in Aerospace Engineering and minor in
+              Computer Science from San Jose State University. Transitioning
+              from Aerospace to Computer Science, I&apos;ve embraced the
+              challenge of learning new technologies and programming languages
+              including Python, JavaScript, Rust, and C, among others.
             </p>
             <p className="text-lg">
               My Aerospace background gives me a unique perspective on
@@ -70,10 +70,7 @@ const AboutPage = () => {
               that allow me to use my skills in web development, data
               management, and software engineering.
             </p>
-            {/* BIOGRAPHY QUOTE */}
-            <span className="italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
               <svg

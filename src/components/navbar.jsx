@@ -74,16 +74,18 @@ const Navbar = () => {
         <div className="flex-shrink-0">
           <Link
             href="/"
-            className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
+            className="text-sm bg-black rounded-md p-1 xl:p-2 font-semibold flex items-center justify-center"
           >
-            <span className="w-10 text-white mr-1">Malay</span>
-            <span className="w-20 h-8 rounded bg-white text-black flex items-center justify-center">
+            <span className="w-10 md:w-16 xl:w-24 text-white mr-1  flex items-center justify-center md:text-xl xl:text-2xl">
+              Malay
+            </span>
+            <span className="w-20 md:w-24 xl:w-32 h-8 rounded bg-white text-black flex items-center justify-center md:text-xl xl:text-2xl">
               Koladiya
             </span>
           </Link>
         </div>
         {/* LINKS */}
-        <div className="hidden md:flex gap-4 flex-grow justify-end md:text-lg xl:text-xl">
+        <div className="hidden md:flex gap-4 flex-grow justify-end md:text-xl xl:text-2xl">
           {links.map((link) => (
             <NavLink link={link} key={link.title} />
           ))}

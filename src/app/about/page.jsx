@@ -37,7 +37,7 @@ const AboutPage = () => {
         ref={containerRef}
       >
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-24 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-full xl:w-full">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 2xl:p-80 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-full xl:w-full">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center items-center">
             {/* BIOGRAPHY IMAGE */}
@@ -49,9 +49,9 @@ const AboutPage = () => {
               className="w-48 h-48 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl xl:text-3xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl 2xl:text-3xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg lg:text-xl xl:text-2xl text-center">
+            <p className="text-lg lg:text-xl 2xl:text-2xl text-center">
               I recently graduated with a Master&apos;s in Computer Science from
               California State University, Fullerton. My academic journey began
               with a Bachelor&apos;s in Aerospace Engineering and minor in
@@ -60,7 +60,7 @@ const AboutPage = () => {
               challenge of learning new technologies and programming languages
               including Python, JavaScript, Rust, and C, among others.
             </p>
-            <p className="text-lg lg:text-xl xl:text-2xl text-center">
+            <p className="text-lg lg:text-xl 2xl:text-2xl text-center">
               My Aerospace background gives me a unique perspective on
               problem-solving and efficiency, which I apply to my computer
               science projects and teamwork. As I navigate my final year, I am
@@ -123,7 +123,7 @@ const AboutPage = () => {
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="font-bold text-2xl"
+              className="font-bold text-2xl 2xl:text-3xl"
             >
               SKILLS
             </motion.h1>
@@ -171,7 +171,7 @@ const AboutPage = () => {
               initial={{ x: "-300px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
               transition={{ delay: 0.2 }}
-              className="font-bold text-2xl"
+              className="font-bold text-2xl 2xl:text-3xl"
             >
               EXPERIENCE & EDUCATION
             </motion.h1>
@@ -179,7 +179,7 @@ const AboutPage = () => {
             <motion.div
               initial={{ x: "-300px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
-              className="w-full text-lg lg:text-xl xl:text-2xl"
+              className="w-full text-lg lg:text-xl 2xl:text-2xl"
             >
               <Timeline />
             </motion.div>

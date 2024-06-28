@@ -20,15 +20,18 @@ import {
   SiRedis,
   SiFastapi,
   SiKubernetes,
+  SiDjango,
 } from "react-icons/si";
 
 const skills = [
   { name: "Python", icon: <SiPython color="#3776AB" /> },
-
   { name: "JavaScript", icon: <SiJavascript color="#F0DB4F" /> },
   { name: "TypeScript", icon: <SiTypescript color="#007ACC" /> },
+
   { name: "React.js", icon: <SiReact color="#61DAFB" /> },
   { name: "Next.js", icon: <SiNextdotjs color="#000000" /> },
+
+  { name: "Django", icon: <SiDjango color="#092E20" /> }, // Added Django here
   { name: "Flask", icon: <SiFlask color="#000000" /> },
   { name: "FastAPI", icon: <SiFastapi color="#009688" /> },
 

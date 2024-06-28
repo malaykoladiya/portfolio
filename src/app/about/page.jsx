@@ -1,6 +1,6 @@
 "use client";
-import Brain from "@/components/brain";
 import SkillsGrid from "@/components/skillsGrid";
+import Timeline from "@/components/timeline";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -11,7 +11,6 @@ const AboutPage = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
-  // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   const experienceRef = useRef();
@@ -27,32 +26,32 @@ const AboutPage = () => {
 
   return (
     <motion.div
-      className="h-full"
+      className="h-full overflow-y-auto"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
       <div
-        className="h-full overflow-scroll lg:flex lg:justify-center"
+        className="flex-1 overflow-scroll flex justify-center"
         ref={containerRef}
       >
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-24 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 xl:w-2/3">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-24 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-full xl:w-full">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-12 justify-center items-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
               src="/profile.jpg"
               alt=""
               width={164}
               height={164}
-              className="w-32 h-32 rounded-full object-cover"
+              className="w-48 h-48 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl xl:text-3xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg">
+            <p className="text-lg lg:text-xl xl:text-2xl text-center">
               I recently graduated with a Master&apos;s in Computer Science from
               California State University, Fullerton. My academic journey began
               with a Bachelor&apos;s in Aerospace Engineering and minor in
@@ -61,7 +60,7 @@ const AboutPage = () => {
               challenge of learning new technologies and programming languages
               including Python, JavaScript, Rust, and C, among others.
             </p>
-            <p className="text-lg">
+            <p className="text-lg lg:text-xl xl:text-2xl text-center">
               My Aerospace background gives me a unique perspective on
               problem-solving and efficiency, which I apply to my computer
               science projects and teamwork. As I navigate my final year, I am
@@ -115,7 +114,10 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* SKILLS CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+          <div
+            className="flex flex-col gap-12 justify-center items-center"
+            ref={skillRef}
+          >
             {/* SKILL TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
@@ -129,7 +131,7 @@ const AboutPage = () => {
             <motion.div
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
-              className="flex gap-4 flex-wrap"
+              className="flex gap-4 flex-wrap justify-center"
             >
               <SkillsGrid />
             </motion.div>
@@ -161,7 +163,7 @@ const AboutPage = () => {
           </div>
           {/* EXPERIENCE CONTAINER */}
           <div
-            className="flex flex-col gap-12 justify-center pb-48"
+            className="flex flex-col gap-12 justify-center items-center pb-48"
             ref={experienceRef}
           >
             {/* EXPERIENCE TITLE */}
@@ -177,148 +179,11 @@ const AboutPage = () => {
             <motion.div
               initial={{ x: "-300px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
-              className=""
+              className="w-full text-lg lg:text-xl xl:text-2xl"
             >
-              {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
-                {/* LEFT */}
-                <div className="w-1/3 ">
-                  {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Graduate Researcher
-                  </div>
-                  {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                    Analyzed and optimized existing Video Text Recognition (VTT)
-                    Docker container{" "}
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    Jan 2023 - May 2023
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Digiclips Inc.
-                  </div>
-                </div>
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
-                  {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                {/* RIGHT */}
-                <div className="w-1/3 "></div>
-              </div>
-              {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
-                {/* LEFT */}
-                <div className="w-1/3 "></div>
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
-                  {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                {/* RIGHT */}
-                <div className="w-1/3 ">
-                  {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    California State University - Fullerton{" "}
-                  </div>
-                  {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                    <p>Master of Science in Computer Science</p>
-                    <p>GPA: 3.77/4.00</p>
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    Jan 2022 - May 2024{" "}
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Fullerton
-                  </div>
-                </div>
-              </div>
-              {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
-                {/* LEFT */}
-                <div className="w-1/3 ">
-                  {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Instructional Student Assistant{" "}
-                  </div>
-                  {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                    Assisted in the tutoring and grading for Introduction to
-                    Programming in MATLAB{" "}
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    Aug 2018 - Dec 2018
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    San Jose State University
-                  </div>
-                </div>
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
-                  {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                {/* RIGHT */}
-                <div className="w-1/3 "></div>
-              </div>
-              {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
-                {/* LEFT */}
-                <div className="w-1/3 "></div>
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
-                  {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                {/* RIGHT */}
-                <div className="w-1/3 ">
-                  {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    San Jose State University{" "}
-                  </div>
-                  {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                    <p>Bachelor of Science in Aerospace Engineering </p>
-                    <p>Minor in Computer Science </p>
-                    <p>GPA: 3.87/4.00</p>
-                  </div>
-
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    Jan 2017 - May 2021{" "}
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    San Jose
-                  </div>
-                </div>
-              </div>
+              <Timeline />
             </motion.div>
           </div>
-        </div>
-        {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
-          <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
     </motion.div>

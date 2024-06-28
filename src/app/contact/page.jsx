@@ -35,7 +35,7 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className=" bg-gradient-to-b from-blue-100 to-red-100 overflow-y-auto"
+      className="overflow-y-auto"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -67,7 +67,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="bg-red-50 rounded-xl text-xl flex flex-col gap-4 justify-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24 overflow-y-auto col-span-1 lg:col-span-2 max-h-screen"
+          className="bg-red-50  rounded-xl text-xl flex flex-col gap-4 justify-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24 overflow-y-auto col-span-1 lg:col-span-2 max-h-screen"
         >
           <span>Hello Malay,</span>
           <textarea

@@ -12,7 +12,8 @@ const TransitionProvider = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className="w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100"
+        // className="w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100"
+        className="w-full h-full flex flex-col"
       >
         <motion.div
           className="h-screen w-screen fixed bg-black rounded-b-[100px] z-40"
@@ -37,7 +38,7 @@ const TransitionProvider = ({ children }) => {
         <div className="h-24">
           <Navbar />
         </div>
-        <div className="h-[calc(100vh-10rem)]">{children}</div>
+        <div className="flex-1 overflow-y-auto">{children}</div>
       </div>
     </AnimatePresence>
   );
